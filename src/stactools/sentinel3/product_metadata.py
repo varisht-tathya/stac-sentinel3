@@ -140,7 +140,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"
@@ -204,7 +204,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"
@@ -268,7 +268,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"
@@ -369,7 +369,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"
@@ -430,7 +430,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"
@@ -467,7 +467,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"
@@ -500,7 +500,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"
@@ -551,7 +551,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"
@@ -583,7 +583,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"
@@ -615,7 +615,7 @@ class ProductMetadata:
             result = {
                 "start_datetime": str(self.start_datetime),
                 "end_datetime": str(self.end_datetime),
-                "instrument": [
+                "instruments": [
                     str(
                         self._root.find_attr(
                             "abbreviation", ".//sentinel-safe:familyName[@abbreviation]"

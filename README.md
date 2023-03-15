@@ -2,15 +2,18 @@
 
 - Name: sentinel3
 - Package: `stactools.sentinel3`
-- PyPI: https://pypi.org/project/stactools-sentinel3/
+- PyPI: <https://pypi.org/project/stactools-sentinel3/>
 - Owner: @chorng & @willrayeo
-- Dataset homepage: https://registry.opendata.aws/sentinel-3/
+- Dataset homepage: <https://registry.opendata.aws/sentinel-3/>
 - STAC extensions used:
   - [eo](https://github.com/stac-extensions/eo)
   - [proj](https://github.com/stac-extensions/projection/)
   - [sat](https://github.com/stac-extensions/sat)
 
-This repository will assist you in the generation of STAC files for Sentinel 3 OLCI (level 1 EFR, ERR and level 2 LFR, LRR, WFR), SLSTR (level 1 RBT and level 2 FRP, LST, WST), SRAL (level 2 LAN and WAT), and SYNERGY (level 2 AOD, SYN, V10, VG1, VGP) datasets.
+This repository will assist you in the generation of STAC files for Sentinel 3
+OLCI (level 1 EFR, ERR and level 2 LFR, LRR, WFR), SLSTR (level 1 RBT and level
+2 FRP, LST, WST), SRAL (level 2 LAN and WAT), and SYNERGY (level 2 AOD, SYN,
+V10, VG1, VGP) datasets.
 
 ## Examples
 
@@ -38,7 +41,7 @@ This repository will assist you in the generation of STAC files for Sentinel 3 O
 Description of the command line functions
 
 ```bash
-$ stac sentinel3 create-item source destination
+stac sentinel3 create-item source destination
 ```
 
 Use `stac sentinel3 --help` to see all subcommands and options.

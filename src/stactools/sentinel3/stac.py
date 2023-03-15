@@ -6,8 +6,7 @@ from pystac.extensions.eo import EOExtension
 from pystac.extensions.sat import SatExtension
 from stactools.core.io import ReadHrefModifier
 
-from .constants import (SENTINEL_CONSTELLATION, SENTINEL_LICENSE,
-                        SENTINEL_PROVIDER)
+from .constants import SENTINEL_CONSTELLATION, SENTINEL_LICENSE, SENTINEL_PROVIDER
 from .metadata_links import MetadataLinks
 from .product_metadata import ProductMetadata
 from .properties import fill_eo_properties, fill_sat_properties
@@ -16,9 +15,10 @@ logger = logging.getLogger(__name__)
 
 
 def create_item(
-        granule_href: str,
-        skip_nc: bool = False,
-        read_href_modifier: Optional[ReadHrefModifier] = None) -> pystac.Item:
+    granule_href: str,
+    skip_nc: bool = False,
+    read_href_modifier: Optional[ReadHrefModifier] = None,
+) -> pystac.Item:
     """Create a STC Item from a Sentinel-3 scene.
 
     Args:
@@ -69,12 +69,9 @@ def create_item(
     item.add_asset(*metalinks.create_manifest_asset())
 
     # create band asset list
-    band_list, asset_list = metalinks.create_band_asset(
-        metalinks.manifest, skip_nc)
+    band_list, asset_list = metalinks.create_band_asset(metalinks.manifest, skip_nc)
 
-    band_list = [
-        key.replace("_Data", "").replace("Data", "") for key in band_list
-    ]
+    band_list = [key.replace("_Data", "").replace("Data", "") for key in band_list]
 
     # objects for bands
     for band, asset in zip(band_list, asset_list):

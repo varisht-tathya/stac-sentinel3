@@ -10,6 +10,7 @@ logger = logging.getLogger(__name__)
 
 def create_sentinel3_command(cli):
     """Creates the stactools-sentinel3 command line utility."""
+
     @cli.group(
         "sentinel3",
         short_help="Commands for working with stactools-sentinel3",
@@ -23,9 +24,9 @@ def create_sentinel3_command(cli):
     )
     @click.argument("src")
     @click.argument("dst")
-    @click.option("--skip_nc",
-                  default=False,
-                  help="Insert <True> to skip reading nc files")
+    @click.option(
+        "--skip_nc", default=False, help="Insert <True> to skip reading nc files"
+    )
     def create_item_command(src, dst, skip_nc):
         """Creates a STAC Collection
 

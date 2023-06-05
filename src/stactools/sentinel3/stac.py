@@ -26,6 +26,20 @@ from .properties import (
 logger = logging.getLogger(__name__)
 
 
+def sen3_to_kebab(asset_key):
+    """Converts asset_key to a clean kebab case"""
+    new_asset_key = ""
+    for first, second in zip(asset_key, asset_key[1:]):
+        new_asset_key += first
+        if first.islower() and second.isupper():
+            new_asset_key += "-"
+    new_asset_key += asset_key[-1]
+    new_asset_key = new_asset_key.replace("_", "-")
+    new_asset_key = new_asset_key.lower()
+    specials = {"eopmetadata": "eop-metadata"}
+    return specials.get(new_asset_key, new_asset_key)
+
+
 def create_item(
     granule_href: str,
     skip_nc: bool = False,
@@ -89,7 +103,10 @@ def create_item(
         metalinks.manifest, skip_nc
     )
 
-    band_list = [key.replace("_Data", "").replace("Data", "", 1) for key in band_list]
+    band_list = [
+        sen3_to_kebab(key.replace("_Data", "").replace("Data", "", 1))
+        for key in band_list
+    ]
 
     # objects for bands
     for band, identifier, asset in zip(band_list, asset_identifier_list, asset_list):

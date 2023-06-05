@@ -355,7 +355,7 @@
         "metadata"
       ]
     },
-    "LST_IN": {
+    "lst-in": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_in.nc",
       "type": "application/x-netcdf",
       "description": "Land Surface Temperature (LST) values",
@@ -384,7 +384,7 @@
         "data"
       ]
     },
-    "LST_ANCILLARY_DS": {
+    "lst-ancillary-ds": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_ancillary_ds.nc",
       "type": "application/x-netcdf",
       "description": "LST ancillary measurement dataset",
@@ -399,7 +399,7 @@
         "data"
       ]
     },
-    "SLSTR_FLAGS_IN": {
+    "slstr-flags-in": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/flags_in.nc",
       "type": "application/x-netcdf",
       "description": "Global flags for the 1km TIR grid, nadir view",
@@ -414,7 +414,7 @@
         "data"
       ]
     },
-    "SLSTR_INDICES_IN": {
+    "slstr-indices-in": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/indices_in.nc",
       "type": "application/x-netcdf",
       "description": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
@@ -429,7 +429,7 @@
         "data"
       ]
     },
-    "SLSTR_TIME_IN": {
+    "slstr-time-in": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/time_in.nc",
       "type": "application/x-netcdf",
       "description": "Time annotations for the 1 KM grid",
@@ -444,7 +444,7 @@
         "data"
       ]
     },
-    "SLSTR_GEODETIC_IN": {
+    "slstr-geodetic-in": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_in.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
@@ -459,7 +459,7 @@
         "data"
       ]
     },
-    "SLSTR_CARTESIAN_IN": {
+    "slstr-cartesian-in": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_in.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
@@ -474,7 +474,7 @@
         "data"
       ]
     },
-    "SLSTR_GEOMETRY_TN": {
+    "slstr-geometry-tn": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geometry_tn.nc",
       "type": "application/x-netcdf",
       "description": "16km solar and satellite geometry annotations, nadir view",
@@ -489,7 +489,7 @@
         "data"
       ]
     },
-    "SLSTR_GEODETIC_TX": {
+    "slstr-geodetic-tx": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_tx.nc",
       "type": "application/x-netcdf",
       "description": "16km geodetic coordinates",
@@ -504,7 +504,7 @@
         "data"
       ]
     },
-    "SLSTR_CARTESIAN_TX": {
+    "slstr-cartesian-tx": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_tx.nc",
       "type": "application/x-netcdf",
       "description": "16km cartesian coordinates",
@@ -519,7 +519,7 @@
         "data"
       ]
     },
-    "SLSTR_MET_TX": {
+    "slstr-met-tx": {
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/met_tx.nc",
       "type": "application/x-netcdf",
       "description": "Meteorological parameters regridded onto the 16km tie points",

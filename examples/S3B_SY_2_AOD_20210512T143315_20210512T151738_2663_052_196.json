@@ -1439,7 +1439,7 @@
         "metadata"
       ]
     },
-    "NTC_AOD": {
+    "ntc-aod": {
       "href": "../tests/data-files/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/NTC_AOD.nc",
       "type": "application/x-netcdf",
       "description": "Global aerosol parameters",

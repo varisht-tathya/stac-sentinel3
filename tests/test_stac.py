@@ -1,5 +1,7 @@
 from pathlib import Path
 
+import pytest
+
 from stactools.sentinel3 import stac
 from stactools.sentinel3.constants import (
     OLCI_L1_ASSET_KEYS,
@@ -30,23 +32,28 @@ ASSET_KEY_LISTS = [
 ]
 
 
-def test_kebab_assets() -> None:
-    new_keys = [stac.sen3_to_kebab(key) for key in ASSET_KEY_LISTS + ["eopmetadata"]]
-    expectation = [
-        "oa01-radiance",
-        "ogvi",
-        "gifapar",
-        "oa01-reflectance",
-        "slstr-s1-rad-an",
-        "frp-in",
-        "lst-in",
-        "standard-measurement",
-        "syn-oa01-reflectance",
-        "b0",
-        "b0",
-        "eop-metadata",
-    ]
-    assert expectation == new_keys
+@pytest.mark.parametrize(
+    "key,expected",
+    zip(
+        ASSET_KEY_LISTS + ["eopmetadata"],
+        [
+            "oa01-radiance",
+            "ogvi",
+            "gifapar",
+            "oa01-reflectance",
+            "slstr-s1-rad-an",
+            "frp-in",
+            "lst-in",
+            "standard-measurement",
+            "syn-oa01-reflectance",
+            "b0",
+            "b0",
+            "eop-metadata",
+        ],
+    ),
+)
+def test_kebab_assets(key: str, expected: str) -> None:
+    assert stac.sen3_to_kebab(key) == expected
 
 
 def test_id(ol_1_efr: Path) -> None:

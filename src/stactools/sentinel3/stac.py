@@ -30,12 +30,11 @@ def sen3_to_kebab(asset_key):
     """Converts asset_key to a clean kebab case"""
     new_asset_key = ""
     for first, second in zip(asset_key, asset_key[1:]):
-        new_asset_key += first
+        new_asset_key += first.lower()
         if first.islower() and second.isupper():
             new_asset_key += "-"
-    new_asset_key += asset_key[-1]
+    new_asset_key += asset_key[-1].lower()
     new_asset_key = new_asset_key.replace("_", "-")
-    new_asset_key = new_asset_key.lower()
     specials = {"eopmetadata": "eop-metadata"}
     return specials.get(new_asset_key, new_asset_key)
 

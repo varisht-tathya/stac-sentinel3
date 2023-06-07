@@ -12,6 +12,7 @@ from .constants import (
     SENTINEL_CONSTELLATION,
     SENTINEL_LICENSE,
     SENTINEL_PROVIDER,
+    SPECIAL_ASSET_KEYS,
 )
 from .file_extension_updated import FileExtensionUpdated
 from .metadata_links import MetadataLinks
@@ -26,8 +27,10 @@ from .properties import (
 logger = logging.getLogger(__name__)
 
 
-def sen3_to_kebab(asset_key):
+def sen3_to_kebab(asset_key: str) -> str:
     """Converts asset_key to a clean kebab case"""
+    if asset_key in SPECIAL_ASSET_KEYS:
+        return SPECIAL_ASSET_KEYS[asset_key]
     new_asset_key = ""
     for first, second in zip(asset_key, asset_key[1:]):
         new_asset_key += first.lower()
@@ -35,8 +38,7 @@ def sen3_to_kebab(asset_key):
             new_asset_key += "-"
     new_asset_key += asset_key[-1].lower()
     new_asset_key = new_asset_key.replace("_", "-")
-    specials = {"eopmetadata": "eop-metadata"}
-    return specials.get(new_asset_key, new_asset_key)
+    return new_asset_key
 
 
 def create_item(

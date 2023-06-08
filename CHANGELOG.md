@@ -12,6 +12,7 @@ number as needed.
 ### Changed
 
 - Item ID format ([#9](https://github.com/stactools-packages/sentinel3/pull/9))
+- Use kebab-case for asset keys ([#13](https://github.com/stactools-packages/sentinel3/pull/13))
 
 ## [0.4.0] - 2023-03-31
 

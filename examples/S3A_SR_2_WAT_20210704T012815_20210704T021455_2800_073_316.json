@@ -811,7 +811,7 @@
         "metadata"
       ]
     },
-    "standardMeasurement": {
+    "standard-measurement": {
       "href": "../tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/standard_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
@@ -847,7 +847,7 @@
         "data"
       ]
     },
-    "enhancedMeasurement": {
+    "enhanced-measurement": {
       "href": "../tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/enhanced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",
@@ -886,7 +886,7 @@
         "data"
       ]
     },
-    "reducedMeasurement": {
+    "reduced-measurement": {
       "href": "../tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/reduced_measurement.nc",
       "type": "application/x-netcdf",
       "description": "Measurement Data Object File",

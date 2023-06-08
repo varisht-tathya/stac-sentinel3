@@ -257,7 +257,7 @@
         "metadata"
       ]
     },
-    "Oa01_reflectance": {
+    "oa01-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa01_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa01",
@@ -280,7 +280,7 @@
         "data"
       ]
     },
-    "Oa02_reflectance": {
+    "oa02-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa02_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa02",
@@ -303,7 +303,7 @@
         "data"
       ]
     },
-    "Oa03_reflectance": {
+    "oa03-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa03_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa03",
@@ -326,7 +326,7 @@
         "data"
       ]
     },
-    "Oa04_reflectance": {
+    "oa04-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa04_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa04",
@@ -349,7 +349,7 @@
         "data"
       ]
     },
-    "Oa05_reflectance": {
+    "oa05-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa05_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa05",
@@ -372,7 +372,7 @@
         "data"
       ]
     },
-    "Oa06_reflectance": {
+    "oa06-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa06_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa06",
@@ -395,7 +395,7 @@
         "data"
       ]
     },
-    "Oa07_reflectance": {
+    "oa07-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa07_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa07",
@@ -418,7 +418,7 @@
         "data"
       ]
     },
-    "Oa08_reflectance": {
+    "oa08-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa08_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa08",
@@ -441,7 +441,7 @@
         "data"
       ]
     },
-    "Oa09_reflectance": {
+    "oa09-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa09_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa09",
@@ -464,7 +464,7 @@
         "data"
       ]
     },
-    "Oa10_reflectance": {
+    "oa10-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa10_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa10",
@@ -487,7 +487,7 @@
         "data"
       ]
     },
-    "Oa11_reflectance": {
+    "oa11-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa11_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa11",
@@ -510,7 +510,7 @@
         "data"
       ]
     },
-    "Oa12_reflectance": {
+    "oa12-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa12_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa12",
@@ -533,7 +533,7 @@
         "data"
       ]
     },
-    "Oa16_reflectance": {
+    "oa16-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa16_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa16",
@@ -556,7 +556,7 @@
         "data"
       ]
     },
-    "Oa17_reflectance": {
+    "oa17-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa17_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa17",
@@ -579,7 +579,7 @@
         "data"
       ]
     },
-    "Oa18_reflectance": {
+    "oa18-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa18_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa18",
@@ -602,7 +602,7 @@
         "data"
       ]
     },
-    "Oa21_reflectance": {
+    "oa21-reflectance": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/Oa21_reflectance.nc",
       "type": "application/x-netcdf",
       "description": "Reflectance for OLCI acquisition band Oa21",
@@ -625,7 +625,7 @@
         "data"
       ]
     },
-    "chlNn": {
+    "chl-nn": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/chl_nn.nc",
       "type": "application/x-netcdf",
       "description": "Neural Net Chlorophyll concentration",
@@ -738,7 +738,7 @@
         "data"
       ]
     },
-    "chlOc4me": {
+    "chl-oc4me": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/chl_oc4me.nc",
       "type": "application/x-netcdf",
       "description": "OC4Me algorithm Chlorophyll concentration",
@@ -779,7 +779,7 @@
         "data"
       ]
     },
-    "iopNn": {
+    "iop-nn": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/iop_nn.nc",
       "type": "application/x-netcdf",
       "description": "Inherent Optical Properties of water",
@@ -899,7 +899,7 @@
         "data"
       ]
     },
-    "tsmNn": {
+    "tsm-nn": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tsm_nn.nc",
       "type": "application/x-netcdf",
       "description": "Total suspended matter concentration",
@@ -1012,7 +1012,7 @@
         "data"
       ]
     },
-    "wAer": {
+    "w-aer": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/w_aer.nc",
       "type": "application/x-netcdf",
       "description": "Aerosol Over Water",
@@ -1047,7 +1047,7 @@
         "data"
       ]
     },
-    "geoCoordinates": {
+    "geo-coordinates": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Geo Coordinates Annotations",
@@ -1062,7 +1062,7 @@
         "data"
       ]
     },
-    "instrumentData": {
+    "instrument-data": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/instrument_data.nc",
       "type": "application/x-netcdf",
       "description": "Instrument Annotation",
@@ -1077,7 +1077,7 @@
         "data"
       ]
     },
-    "tieGeoCoordinates": {
+    "tie-geo-coordinates": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tie_geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geo Coordinate Annotations",
@@ -1092,7 +1092,7 @@
         "data"
       ]
     },
-    "tieGeometries": {
+    "tie-geometries": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tie_geometries.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geometries Annotations",
@@ -1107,7 +1107,7 @@
         "data"
       ]
     },
-    "tieMeteo": {
+    "tie-meteo": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/tie_meteo.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Meteo Annotations",
@@ -1122,7 +1122,7 @@
         "data"
       ]
     },
-    "timeCoordinates": {
+    "time-coordinates": {
       "href": "../tests/data-files/S3A_OL_2_WFR____20210604T001016_20210604T001316_20210604T021918_0179_072_273_1440_MAR_O_NR_003.SEN3/time_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Time Coordinates Annotations",

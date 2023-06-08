@@ -832,3 +832,7 @@ SYNERGY_L2_SDR_BANDS = [
 ]
 
 SENTINEL_OLCI_SLSTR_BANDS = {**SENTINEL_SLSTR_BANDS, **SENTINEL_OLCI_BANDS}
+
+"""Mapping for any stac Asset keys which don't follow the default kebab-case rules.
+This maps the resulting string in sen3_to_kebab, to the specially crafted version."""
+SPECIAL_ASSET_KEYS = {"eopmetadata": "eop-metadata"}

@@ -256,7 +256,7 @@
         "metadata"
       ]
     },
-    "Oa01_radiance": {
+    "oa01-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa01_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa01",
@@ -279,7 +279,7 @@
         "data"
       ]
     },
-    "Oa02_radiance": {
+    "oa02-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa02_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa02",
@@ -302,7 +302,7 @@
         "data"
       ]
     },
-    "Oa03_radiance": {
+    "oa03-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa03_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa03",
@@ -325,7 +325,7 @@
         "data"
       ]
     },
-    "Oa04_radiance": {
+    "oa04-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa04_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa04",
@@ -348,7 +348,7 @@
         "data"
       ]
     },
-    "Oa05_radiance": {
+    "oa05-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa05_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa05",
@@ -371,7 +371,7 @@
         "data"
       ]
     },
-    "Oa06_radiance": {
+    "oa06-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa06_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa06",
@@ -394,7 +394,7 @@
         "data"
       ]
     },
-    "Oa07_radiance": {
+    "oa07-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa07_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa07",
@@ -417,7 +417,7 @@
         "data"
       ]
     },
-    "Oa08_radiance": {
+    "oa08-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa08_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa08",
@@ -440,7 +440,7 @@
         "data"
       ]
     },
-    "Oa09_radiance": {
+    "oa09-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa09_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa09",
@@ -463,7 +463,7 @@
         "data"
       ]
     },
-    "Oa10_radiance": {
+    "oa10-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa10_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa10",
@@ -486,7 +486,7 @@
         "data"
       ]
     },
-    "Oa11_radiance": {
+    "oa11-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa11_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa11",
@@ -509,7 +509,7 @@
         "data"
       ]
     },
-    "Oa12_radiance": {
+    "oa12-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa12_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa12",
@@ -532,7 +532,7 @@
         "data"
       ]
     },
-    "Oa13_radiance": {
+    "oa13-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa13_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa13",
@@ -555,7 +555,7 @@
         "data"
       ]
     },
-    "Oa14_radiance": {
+    "oa14-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa14_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa14",
@@ -578,7 +578,7 @@
         "data"
       ]
     },
-    "Oa15_radiance": {
+    "oa15-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa15_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa15",
@@ -601,7 +601,7 @@
         "data"
       ]
     },
-    "Oa16_radiance": {
+    "oa16-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa16_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa16",
@@ -624,7 +624,7 @@
         "data"
       ]
     },
-    "Oa17_radiance": {
+    "oa17-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa17_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa17",
@@ -647,7 +647,7 @@
         "data"
       ]
     },
-    "Oa18_radiance": {
+    "oa18-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa18_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa18",
@@ -670,7 +670,7 @@
         "data"
       ]
     },
-    "Oa19_radiance": {
+    "oa19-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa19_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa19",
@@ -693,7 +693,7 @@
         "data"
       ]
     },
-    "Oa20_radiance": {
+    "oa20-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa20_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa20",
@@ -716,7 +716,7 @@
         "data"
       ]
     },
-    "Oa21_radiance": {
+    "oa21-radiance": {
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa21_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa21",

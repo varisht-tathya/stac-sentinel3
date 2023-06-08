@@ -1020,7 +1020,7 @@
         "data"
       ]
     },
-    "rcOgvi": {
+    "rc-ogvi": {
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/rc_ogvi.nc",
       "type": "application/x-netcdf",
       "description": "Rectified Reflectance",
@@ -1064,7 +1064,7 @@
         "data"
       ]
     },
-    "timeCoordinates": {
+    "time-coordinates": {
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/time_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Time Coordinates Annotations",
@@ -1079,7 +1079,7 @@
         "data"
       ]
     },
-    "geoCoordinates": {
+    "geo-coordinates": {
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Geo Coordinates Annotations",
@@ -1094,7 +1094,7 @@
         "data"
       ]
     },
-    "tieGeoCoordinates": {
+    "tie-geo-coordinates": {
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geo Coordinate Annotations",
@@ -1109,7 +1109,7 @@
         "data"
       ]
     },
-    "tieGeometries": {
+    "tie-geometries": {
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geometries.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geometries Annotations",
@@ -1124,7 +1124,7 @@
         "data"
       ]
     },
-    "tieMeteo": {
+    "tie-meteo": {
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_meteo.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Meteo Annotations",
@@ -1139,7 +1139,7 @@
         "data"
       ]
     },
-    "instrumentData": {
+    "instrument-data": {
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/instrument_data.nc",
       "type": "application/x-netcdf",
       "description": "Instrument Annotation",

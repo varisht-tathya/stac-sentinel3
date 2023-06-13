@@ -8,13 +8,13 @@
     "sat:absolute_orbit": 15868,
     "sat:relative_orbit": 196,
     "eo:cloud_cover": 82.147057,
-    "start_datetime": "2021-05-12 14:33:14.765777+00:00",
-    "end_datetime": "2021-05-12 15:17:38.420982+00:00",
+    "start_datetime": "2021-05-12T14:33:14.765777Z",
+    "end_datetime": "2021-05-12T15:17:38.420982Z",
     "instruments": [
-      "SYNERGY"
+      "OLCI",
+      "SLSTR"
     ],
-    "s3:mode": "EO",
-    "s3:productType": "SY_2_AOD___",
+    "s3:product_type": "SY_2_AOD___",
     "s3:gsd": {
       "OLCI": 300,
       "SLSTR": {
@@ -22,25 +22,16 @@
         "S7-S9 and F1-F2": 1000
       }
     },
-    "s3:salineWaterPixels_percentage": 72.660328,
-    "s3:landPixels_percentage": 27.276878,
+    "s3:saline_water": 72.660328,
+    "s3:land": 27.276878,
     "s3:shape": [
       324,
       4035
     ],
-    "providers": [
-      {
-        "name": "ESA",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ],
-        "url": "https://earth.esa.int/web/guest/home"
-      }
-    ],
     "platform": "Sentinel-3B",
     "constellation": "Sentinel-3",
+    "s3:processing_timeliness": "NT",
+    "s3:product_name": "synergy-aod",
     "datetime": "2021-05-12T14:55:26.593379Z"
   },
   "geometry": {
@@ -1422,18 +1413,13 @@
       ]
     ]
   },
-  "links": [
-    {
-      "rel": "license",
-      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    }
-  ],
+  "links": [],
   "assets": {
     "safe-manifest": {
       "href": "../tests/data-files/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "description": "SAFE product manifest",
       "file:checksum": "e55367170bb60e7d1cab151c24e6e086",
-      "file:local_path": "S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/xfdumanifest.xml",
       "file:size": 48295,
       "roles": [
         "metadata"
@@ -1451,42 +1437,41 @@
         {
           "name": "SYN_440",
           "description": "OLCI channel Oa03",
-          "center_wavelength": 442.5,
-          "band_width": 10
+          "center_wavelength": 0.4425,
+          "full_width_half_max": 0.01
         },
         {
           "name": "SYN_550",
           "description": "SLSTR nadir and oblique channel S1",
-          "center_wavelength": 550,
-          "band_width": 20
+          "center_wavelength": 0.55,
+          "full_width_half_max": 0.02
         },
         {
           "name": "SYN_670",
           "description": "SLSTR nadir and oblique channel S2",
-          "center_wavelength": 659,
-          "band_width": 20
+          "center_wavelength": 0.659,
+          "full_width_half_max": 0.02
         },
         {
           "name": "SYN_865",
           "description": "OLCI channel Oa17, SLSTR nadir and oblique channel S2",
-          "center_wavelength": 865,
-          "band_width": 20
+          "center_wavelength": 0.865,
+          "full_width_half_max": 0.02
         },
         {
           "name": "SYN_1600",
           "description": "SLSTR nadir and oblique channel S5",
-          "center_wavelength": 1610,
-          "band_width": 60
+          "center_wavelength": 1.61,
+          "full_width_half_max": 0.06
         },
         {
           "name": "SYN_2250",
           "description": "SLSTR nadir and oblique channel S6",
-          "center_wavelength": 2250,
-          "band_width": 50
+          "center_wavelength": 2.25,
+          "full_width_half_max": 0.05
         }
       ],
       "file:checksum": "453028626dd93f7a69a6d6953e872834",
-      "file:local_path": "S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/NTC_AOD.nc",
       "file:size": 33302097,
       "roles": [
         "data"
@@ -1502,6 +1487,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }

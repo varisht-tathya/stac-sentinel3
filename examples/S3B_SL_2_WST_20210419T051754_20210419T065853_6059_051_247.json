@@ -8,43 +8,33 @@
     "sat:absolute_orbit": 15534,
     "sat:relative_orbit": 247,
     "eo:cloud_cover": 67.421502,
-    "start_datetime": "2021-04-19 05:17:54.047806+00:00",
-    "end_datetime": "2021-04-19 06:58:53.371850+00:00",
+    "start_datetime": "2021-04-19T05:17:54.047806Z",
+    "end_datetime": "2021-04-19T06:58:53.371850Z",
     "instruments": [
       "SLSTR"
     ],
-    "s3:mode": "EO",
-    "s3:productType": "SL_2_WST___",
+    "s3:product_type": "SL_2_WST___",
     "s3:gsd": {
       "S1-S6": 500,
       "S7-S9 and F1-F2": 1000
     },
-    "s3:salineWaterPixels_percentage": 69.464947,
-    "s3:landPixels_percentage": 30.535053,
-    "s3:coastalPixels_percentage": 0.0,
-    "s3:freshInlandWaterPixels_percentage": 0.0,
-    "s3:tidalRegionPixels_percentage": 0.0,
-    "s3:cosmeticPixels_percentage": 42.198716,
-    "s3:duplicatedPixels_percentage": 0.0,
-    "s3:saturatedPixels_percentage": 0.0,
-    "s3:outOfRangePixels_percentage": 26.93685,
+    "s3:saline_water": 69.464947,
+    "s3:land": 30.535053,
+    "s3:coastal": 0.0,
+    "s3:fresh_inland_water": 0.0,
+    "s3:tidal_region": 0.0,
+    "s3:cosmetic": 42.198716,
+    "s3:duplicated": 0.0,
+    "s3:saturated": 0.0,
+    "s3:out_of_range": 26.93685,
     "s3:shape": [
       1500,
       40394
     ],
-    "providers": [
-      {
-        "name": "ESA",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ],
-        "url": "https://earth.esa.int/web/guest/home"
-      }
-    ],
     "platform": "Sentinel-3B",
     "constellation": "Sentinel-3",
+    "s3:processing_timeliness": "NT",
+    "s3:product_name": "slstr-wst",
     "datetime": "2021-04-19T06:08:23.709828Z"
   },
   "geometry": {
@@ -1338,18 +1328,13 @@
       ]
     ]
   },
-  "links": [
-    {
-      "rel": "license",
-      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    }
-  ],
+  "links": [],
   "assets": {
     "safe-manifest": {
       "href": "../tests/data-files/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "description": "SAFE product manifest",
       "file:checksum": "78276d1a70ef406665d21d6cb83ecb62",
-      "file:local_path": "S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/xfdumanifest.xml",
       "file:size": 214116,
       "roles": [
         "metadata"
@@ -1364,24 +1349,23 @@
         {
           "name": "S7",
           "description": "Band 7 - SST, LST, Active fire",
-          "center_wavelength": 3742,
-          "band_width": 398
+          "center_wavelength": 3.742,
+          "full_width_half_max": 0.398
         },
         {
           "name": "S8",
           "description": "Band 8 - SST, LST, Active fire",
-          "center_wavelength": 10854,
-          "band_width": 776
+          "center_wavelength": 10.854,
+          "full_width_half_max": 0.776
         },
         {
           "name": "S9",
           "description": "Band 9 - SST, LST",
-          "center_wavelength": 12022.5,
-          "band_width": 905
+          "center_wavelength": 12.0225,
+          "full_width_half_max": 0.905
         }
       ],
       "file:checksum": "f7e67d0bb4acf309861443825cda3790",
-      "file:local_path": "S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
       "file:size": 644094789,
       "roles": [
         "data"
@@ -1397,6 +1381,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }

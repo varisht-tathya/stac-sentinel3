@@ -8,43 +8,33 @@
     "sat:absolute_orbit": 28422,
     "sat:relative_orbit": 344,
     "eo:cloud_cover": 63.904667,
-    "start_datetime": "2021-08-02 00:04:19.503088+00:00",
-    "end_datetime": "2021-08-02 00:07:19.503088+00:00",
+    "start_datetime": "2021-08-02T00:04:19.503088Z",
+    "end_datetime": "2021-08-02T00:07:19.503088Z",
     "instruments": [
       "SLSTR"
     ],
-    "s3:mode": "EO",
-    "s3:productType": "SL_2_FRP___",
+    "s3:product_type": "SL_2_FRP___",
     "s3:gsd": {
       "S1-S6": 500,
       "S7-S9 and F1-F2": 1000
     },
-    "s3:salineWaterPixels_percentage": 99.891,
-    "s3:landPixels_percentage": 0.109,
-    "s3:coastalPixels_percentage": 0.017944,
-    "s3:freshInlandWaterPixels_percentage": 0.000167,
-    "s3:tidalRegionPixels_percentage": 0.0,
-    "s3:cosmeticPixels_percentage": 21.585889,
-    "s3:duplicatedPixels_percentage": 5.461111,
-    "s3:saturatedPixels_percentage": 0.0,
-    "s3:outOfRangePixels_percentage": 0.184722,
+    "s3:saline_water": 99.891,
+    "s3:land": 0.109,
+    "s3:coastal": 0.017944,
+    "s3:fresh_inland_water": 0.000167,
+    "s3:tidal_region": 0.0,
+    "s3:cosmetic": 21.585889,
+    "s3:duplicated": 5.461111,
+    "s3:saturated": 0.0,
+    "s3:out_of_range": 0.184722,
     "s3:shape": [
       1500,
       1200
     ],
-    "providers": [
-      {
-        "name": "ESA",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ],
-        "url": "https://earth.esa.int/web/guest/home"
-      }
-    ],
     "platform": "Sentinel-3A",
     "constellation": "Sentinel-3",
+    "s3:processing_timeliness": "NT",
+    "s3:product_name": "slstr-frp",
     "datetime": "2021-08-02T00:05:49.503088Z"
   },
   "geometry": {
@@ -338,18 +328,13 @@
       ]
     ]
   },
-  "links": [
-    {
-      "rel": "license",
-      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    }
-  ],
+  "links": [],
   "assets": {
     "safe-manifest": {
       "href": "../tests/data-files/S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "description": "SAFE product manifest",
       "file:checksum": "8644cedf6bcf6086524c1f1bf9afdd3f",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/xfdumanifest.xml",
       "file:size": 115669,
       "roles": [
         "metadata"
@@ -367,30 +352,29 @@
         {
           "name": "S5",
           "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
-          "center_wavelength": 1613.4,
-          "band_width": 60.68
+          "center_wavelength": 1.6134,
+          "full_width_half_max": 0.06068
         },
         {
           "name": "S6",
           "description": "Band 6 - Vegetation state and cloud clearing",
-          "center_wavelength": 2255.7,
-          "band_width": 50.15
+          "center_wavelength": 2.2557,
+          "full_width_half_max": 0.05015
         },
         {
           "name": "S7",
           "description": "Band 7 - SST, LST, Active fire",
-          "center_wavelength": 3742,
-          "band_width": 398
+          "center_wavelength": 3.742,
+          "full_width_half_max": 0.398
         },
         {
           "name": "F1",
           "description": "Band 10 - Active fire",
-          "center_wavelength": 3742,
-          "band_width": 398
+          "center_wavelength": 3.742,
+          "full_width_half_max": 0.398
         }
       ],
       "file:checksum": "e80df8430624ec6ff9a4f22295f4a178",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/FRP_in.nc",
       "file:size": 435951,
       "roles": [
         "data"
@@ -405,7 +389,6 @@
         1000
       ],
       "file:checksum": "05e47c1b71fb195553600b1d3af77710",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_fn.nc",
       "file:size": 4472072,
       "roles": [
         "data"
@@ -420,7 +403,6 @@
         1000
       ],
       "file:checksum": "f93e4e6df49d9bb197c2763371632cd6",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_in.nc",
       "file:size": 4442134,
       "roles": [
         "data"
@@ -435,7 +417,6 @@
         1000
       ],
       "file:checksum": "49a3016bc439a8f6c141639223f8791d",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/cartesian_tx.nc",
       "file:size": 41993,
       "roles": [
         "data"
@@ -450,7 +431,6 @@
         1000
       ],
       "file:checksum": "53bc9d11a8c5cb34c9b51f96eceebe9f",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/flags_fn.nc",
       "file:size": 1339572,
       "roles": [
         "data"
@@ -465,7 +445,6 @@
         1000
       ],
       "file:checksum": "39487bfb7c4f447c1c9ec052b8436f83",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/flags_in.nc",
       "file:size": 1991460,
       "roles": [
         "data"
@@ -480,7 +459,6 @@
         1000
       ],
       "file:checksum": "360707fba7433c7defb49ea8cbe17e71",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_fn.nc",
       "file:size": 7422422,
       "roles": [
         "data"
@@ -495,7 +473,6 @@
         1000
       ],
       "file:checksum": "8256eab16dc07852bfe889ba0a2253af",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_in.nc",
       "file:size": 7361648,
       "roles": [
         "data"
@@ -510,7 +487,6 @@
         1000
       ],
       "file:checksum": "40c185371d076a757011bebad5d36dd8",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geodetic_tx.nc",
       "file:size": 1622693,
       "roles": [
         "data"
@@ -525,7 +501,6 @@
         1000
       ],
       "file:checksum": "ffce0a618ebbbda718ff6e7d01c03024",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/geometry_tn.nc",
       "file:size": 3422419,
       "roles": [
         "data"
@@ -540,7 +515,6 @@
         1000
       ],
       "file:checksum": "ce06860ec3a167255b0a64b8a8a6a7be",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/indices_fn.nc",
       "file:size": 860919,
       "roles": [
         "data"
@@ -555,7 +529,6 @@
         1000
       ],
       "file:checksum": "98092fedda6e22398d275094422ed21d",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/indices_in.nc",
       "file:size": 858106,
       "roles": [
         "data"
@@ -570,7 +543,6 @@
         1000
       ],
       "file:checksum": "0f29afc3680e43e66e01d609c9b8071a",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/met_tx.nc",
       "file:size": 30215998,
       "roles": [
         "data"
@@ -585,7 +557,6 @@
         1000
       ],
       "file:checksum": "168c1202259bcb69c13be967cd31842b",
-      "file:local_path": "S3A_SL_2_FRP____20210802T000420_20210802T000720_20210803T123912_0179_074_344_2880_LN2_O_NT_004.SEN3/time_in.nc",
       "file:size": 64340,
       "roles": [
         "data"
@@ -601,6 +572,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }

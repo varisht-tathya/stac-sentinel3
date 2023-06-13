@@ -7,36 +7,26 @@
     "sat:orbit_state": "descending",
     "sat:absolute_orbit": 28009,
     "sat:relative_orbit": 316,
-    "start_datetime": "2021-07-04 01:28:14.862485+00:00",
-    "end_datetime": "2021-07-04 02:14:55.499366+00:00",
+    "start_datetime": "2021-07-04T01:28:14.862485Z",
+    "end_datetime": "2021-07-04T02:14:55.499366Z",
     "instruments": [
       "SRAL"
     ],
-    "s3:mode": "EO",
-    "s3:productType": "SR_2_WAT___",
+    "s3:product_type": "SR_2_WAT___",
     "s3:gsd": {
       "along-track": 300,
       "across-track": 1640
     },
-    "s3:lrmModePercentage": 0.0,
-    "s3:sarModePercentage": 100.0,
-    "s3:landPercentage": 8.0,
-    "s3:closedSeaPercentage": 0.0,
-    "s3:continentalIcePercentage": 0.0,
-    "s3:openOceanPercentage": 92.0,
-    "providers": [
-      {
-        "name": "ESA",
-        "roles": [
-          "producer",
-          "processor",
-          "licensor"
-        ],
-        "url": "https://earth.esa.int/web/guest/home"
-      }
-    ],
+    "s3:lrm_mode": 0.0,
+    "s3:sar_mode": 100.0,
+    "s3:land": 8.0,
+    "s3:closed_sea": 0.0,
+    "s3:continental_ice": 0.0,
+    "s3:open_ocean": 92.0,
     "platform": "Sentinel-3A",
     "constellation": "Sentinel-3",
+    "s3:processing_timeliness": "NT",
+    "s3:product_name": "sral-wat",
     "datetime": "2021-07-04T01:51:35.180925Z"
   },
   "geometry": {
@@ -794,18 +784,13 @@
       ]
     ]
   },
-  "links": [
-    {
-      "rel": "license",
-      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice"
-    }
-  ],
+  "links": [],
   "assets": {
     "safe-manifest": {
       "href": "../tests/data-files/S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/xfdumanifest.xml",
       "type": "application/xml",
+      "description": "SAFE product manifest",
       "file:checksum": "08faddcfb074bc9ddd4b61625eb8bce6",
-      "file:local_path": "S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/xfdumanifest.xml",
       "file:size": 102307,
       "roles": [
         "metadata"
@@ -826,23 +811,22 @@
           "time_20_c": 36806
         }
       ],
-      "sral:bands": [
+      "file:checksum": "9dd5b75385c391df0071722c4ac90642",
+      "file:size": 5265691,
+      "s3:altimetry_bands": [
         {
-          "name": "C",
           "description": "Band C - Ionospheric correction",
-          "central_frequency": 5409999872.0,
-          "band_width_in_Hz": 290000000.0
+          "frequency_band": "C",
+          "center_frequency": 5.409999872,
+          "band_width": 0.29
         },
         {
-          "name": "Ku",
           "description": "Band Ku - Range measurements",
-          "central_frequency": 13575000064.0,
-          "band_width_in_Hz": 320000000.0
+          "frequency_band": "Ku",
+          "center_frequency": 13.575000064,
+          "band_width": 0.32
         }
       ],
-      "file:checksum": "9dd5b75385c391df0071722c4ac90642",
-      "file:local_path": "S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/standard_measurement.nc",
-      "file:size": 5265691,
       "roles": [
         "data"
       ]
@@ -865,23 +849,22 @@
           "echo_sample_ind": 128
         }
       ],
-      "sral:bands": [
+      "file:checksum": "9e0aea65b6cb93daea99eeed493b639f",
+      "file:size": 35724332,
+      "s3:altimetry_bands": [
         {
-          "name": "C",
           "description": "Band C - Ionospheric correction",
-          "central_frequency": 5409999872.0,
-          "band_width_in_Hz": 290000000.0
+          "frequency_band": "C",
+          "center_frequency": 5.409999872,
+          "band_width": 0.29
         },
         {
-          "name": "Ku",
           "description": "Band Ku - Range measurements",
-          "central_frequency": 13575000064.0,
-          "band_width_in_Hz": 320000000.0
+          "frequency_band": "Ku",
+          "center_frequency": 13.575000064,
+          "band_width": 0.32
         }
       ],
-      "file:checksum": "9e0aea65b6cb93daea99eeed493b639f",
-      "file:local_path": "S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/enhanced_measurement.nc",
-      "file:size": 35724332,
       "roles": [
         "data"
       ]
@@ -895,17 +878,16 @@
           "time_01": 1887
         }
       ],
-      "sral:bands": [
+      "file:checksum": "ab44587cbe2d3a044b9d79bc9ba59525",
+      "file:size": 339280,
+      "s3:altimetry_bands": [
         {
-          "name": "Ku",
           "description": "Band Ku - Range measurements",
-          "central_frequency": 13575000064.0,
-          "band_width_in_Hz": 320000000.0
+          "frequency_band": "Ku",
+          "center_frequency": 13.575000064,
+          "band_width": 0.32
         }
       ],
-      "file:checksum": "ab44587cbe2d3a044b9d79bc9ba59525",
-      "file:local_path": "S3A_SR_2_WAT____20210704T012815_20210704T021455_20210729T173140_2800_073_316______MAR_O_NT_004.SEN3/reduced_measurement.nc",
-      "file:size": 339280,
       "roles": [
         "data"
       ]
@@ -920,6 +902,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }

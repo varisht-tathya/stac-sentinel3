@@ -2,7 +2,7 @@ import logging
 import os
 import re
 from decimal import Decimal
-from typing import Any, List, Optional
+from typing import Any, Dict, List, Optional
 
 import pystac
 from pystac.extensions.eo import EOExtension
@@ -101,6 +101,52 @@ def sen3_to_snake(key: str) -> str:
 def product_type(source, datatype):
     source_to_name = {"OL": "olci", "SL": "slstr", "SR": "sral", "SY": "synergy"}
     return f"{source_to_name[source]}-{datatype.strip('_').lower()}"
+
+
+def get_array_shape(
+    asset_shape: List[Dict[str, int]], item_shape: List[int]
+) -> List[int]:
+    asset_reshaped: Dict[str, int]
+    if asset_shape is None:
+        if item_shape:
+            s3shape = item_shape
+        else:
+            raise ValueError("Both asset_shape and item_shape are None")
+    else:
+        if isinstance(asset_shape, list) and all(
+            all(
+                [
+                    isinstance(asset_shape[i], dict),
+                    len(asset_shape[i]) == 1,
+                    isinstance(next(iter(asset_shape[i].keys())), str),
+                    isinstance(next(iter(asset_shape[i].values())), int),
+                ]
+            )
+            for i in range(len(asset_shape))
+        ):
+            asset_reshaped = dict(*zip(*[a.items() for a in asset_shape]))
+        else:
+            logger.debug(
+                "structure of asset level 's3:shape' doesn't match " "expectation: %s",
+                asset_shape,
+            )
+            asset_reshaped = {}
+        if asset_reshaped and all(
+            x in asset_reshaped for x in ("latitude", "longitude")
+        ):
+            s3shape = [asset_reshaped["latitude"], asset_reshaped["longitude"]]
+        elif asset_reshaped and all(x in asset_reshaped for x in ("rows", "columns")):
+            s3shape = [asset_reshaped["rows"], asset_reshaped["columns"]]
+        elif asset_reshaped and all(
+            x in asset_reshaped for x in ("rows", "removed_pixels")
+        ):
+            s3shape = [asset_reshaped["rows"], asset_reshaped["removed_pixels"]]
+        elif len(asset_shape) == 1:
+            s3shape = list(asset_shape[0].values())
+        else:
+            raise ValueError("unknown asset_shape left unchanged: %s", asset_shape)
+
+    return s3shape
 
 
 def create_item(
@@ -225,9 +271,20 @@ def create_item(
         )
 
     # ---- ASSETS ----
+    # pushing shape down to asset level
+    item_shape = item.properties.pop("s3:shape", None)
+
     for asset_key, asset in item.assets.items():
         # remove local paths
         asset.extra_fields.pop("file:local_path", None)
+
+        # ensure shape is set at asset level
+        asset_shape = asset.extra_fields.get("s3:shape", None)
+        s3shape: List[int] = []
+        if asset_shape or item_shape:
+            s3shape = get_array_shape(asset_shape, item_shape)
+        if len(s3shape) > 0:
+            asset.extra_fields["s3:shape"] = s3shape
 
         # Add a description to the safe_manifest asset
         if asset_key == "safe-manifest":

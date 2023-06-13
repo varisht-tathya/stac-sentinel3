@@ -25,10 +25,6 @@
     "s3:duplicated": 0.0,
     "s3:saturated": 0.0,
     "s3:dubious_samples": 0.0,
-    "s3:shape": [
-      1217,
-      15092
-    ],
     "platform": "Sentinel-3B",
     "constellation": "Sentinel-3",
     "s3:processing_timeliness": "NT",
@@ -902,6 +898,10 @@
       "description": "SAFE product manifest",
       "file:checksum": "5d7aa13f028469ee445c33ab3a03322b",
       "file:size": 159712,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "metadata"
       ]
@@ -910,9 +910,9 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/ogvi.nc",
       "type": "application/x-netcdf",
       "description": "OLCI global Vegetal Index",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "eo:bands": [
         {
@@ -936,6 +936,10 @@
       ],
       "file:checksum": "62641c090d69f1e3808b4f3af9a16bdd",
       "file:size": 355069,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -944,9 +948,9 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/otci.nc",
       "type": "application/x-netcdf",
       "description": "OLCI Terrestrial Chlorophyll Index",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "eo:bands": [
         {
@@ -970,6 +974,10 @@
       ],
       "file:checksum": "0218d562d3eacb20843fc06ef3f7a1b0",
       "file:size": 547075,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -978,9 +986,9 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/iwv.nc",
       "type": "application/x-netcdf",
       "description": "Integrated water vapour column",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "eo:bands": [
         {
@@ -998,6 +1006,10 @@
       ],
       "file:checksum": "7943106a95ac4d6aea3827d4043b4e66",
       "file:size": 10579229,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -1006,9 +1018,9 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/rc_ogvi.nc",
       "type": "application/x-netcdf",
       "description": "Rectified Reflectance",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "eo:bands": [
         {
@@ -1026,6 +1038,10 @@
       ],
       "file:checksum": "a1097d61a25557e04836e29cde961b56",
       "file:size": 1258173,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -1034,12 +1050,16 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/lqsf.nc",
       "type": "application/x-netcdf",
       "description": "Land Quality and Science Flags",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "file:checksum": "e51b74b6a8e21e587264eb31c588abac",
       "file:size": 3910619,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -1048,12 +1068,16 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/time_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Time Coordinates Annotations",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "file:checksum": "98fcfd9c1af8a72735f424f7e63f5c12",
       "file:size": 23607,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -1062,12 +1086,16 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Geo Coordinates Annotations",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "file:checksum": "b965fc64ce2aec2327178f8d42bcba67",
       "file:size": 55029575,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -1076,12 +1104,16 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geo_coordinates.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geo Coordinate Annotations",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "file:checksum": "b4f335028ddf886a7e5658c0bbf0eabc",
       "file:size": 4780779,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -1090,12 +1122,16 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_geometries.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Geometries Annotations",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "file:checksum": "f2945a9db361a4f4d4f894e568b98049",
       "file:size": 9169195,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -1104,12 +1140,16 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/tie_meteo.nc",
       "type": "application/x-netcdf",
       "description": "Tie-Point Meteo Annotations",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "file:checksum": "f37552572fdaeebaf223a65705b5d9c8",
       "file:size": 78319253,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]
@@ -1118,12 +1158,16 @@
       "href": "../tests/data-files/S3B_OL_2_LRR____20210731T214325_20210731T222741_20210802T020007_2656_055_186______LN1_O_NT_002.SEN3/instrument_data.nc",
       "type": "application/x-netcdf",
       "description": "Instrument Annotation",
-      "resolution": [
-        1080,
-        1176
+      "s3:spatial_resolution": [
+        1176,
+        1080
       ],
       "file:checksum": "21b089d03ffe781c818bcf01bf19eb00",
       "file:size": 1137558,
+      "s3:shape": [
+        15092,
+        1217
+      ],
       "roles": [
         "data"
       ]

@@ -24,10 +24,6 @@
     "s3:duplicated": 25.0,
     "s3:saturated": 0.0,
     "s3:dubious_samples": 0.0,
-    "s3:shape": [
-      4865,
-      3749
-    ],
     "platform": "Sentinel-3A",
     "constellation": "Sentinel-3",
     "s3:processing_timeliness": "NR",
@@ -237,6 +233,10 @@
       "description": "SAFE product manifest",
       "file:checksum": "5ad1048b273bc14754315055e5a5fcd3",
       "file:size": 283388,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "metadata"
       ]
@@ -245,9 +245,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa01_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa01",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -259,6 +259,10 @@
       ],
       "file:checksum": "b35469e134850b9edb49917a683a6c2e",
       "file:size": 18738535,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -267,9 +271,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa02_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa02",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -281,6 +285,10 @@
       ],
       "file:checksum": "9fe7b4fa185545e4a8de259f8a9e0042",
       "file:size": 19355002,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -289,9 +297,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa03_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa03",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -303,6 +311,10 @@
       ],
       "file:checksum": "f8777f610cd9991e56b5e6a3db70448f",
       "file:size": 20275865,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -311,9 +323,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa04_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa04",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -325,6 +337,10 @@
       ],
       "file:checksum": "de0bec70f299cbe5f84d78e35fc865c2",
       "file:size": 20985358,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -333,9 +349,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa05_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa05",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -347,6 +363,10 @@
       ],
       "file:checksum": "7cc48586e8c918dcb9ee8de7d5d64282",
       "file:size": 21397184,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -355,9 +375,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa06_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa06",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -369,6 +389,10 @@
       ],
       "file:checksum": "4eeab3759b1c08f5edc4f01e640dd717",
       "file:size": 20971549,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -377,9 +401,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa07_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa07",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -391,6 +415,10 @@
       ],
       "file:checksum": "84f73a37382ab1f2391c029dc5fb1344",
       "file:size": 21812721,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -399,9 +427,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa08_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa08",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -413,6 +441,10 @@
       ],
       "file:checksum": "aa61c93d3bfe977e0eb2346ad0f05b9a",
       "file:size": 21911818,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -421,9 +453,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa09_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa09",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -435,6 +467,10 @@
       ],
       "file:checksum": "5739d30f9fafa7dccccba0dcc86c817c",
       "file:size": 21742420,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -443,9 +479,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa10_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa10",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -457,6 +493,10 @@
       ],
       "file:checksum": "6066a81872b2c516459270413a695ddb",
       "file:size": 22219426,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -465,9 +505,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa11_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa11",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -479,6 +519,10 @@
       ],
       "file:checksum": "0ed26fa4ad491f6289eb87029f926da7",
       "file:size": 22466296,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -487,9 +531,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa12_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa12",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -501,6 +545,10 @@
       ],
       "file:checksum": "c50dee0eb4c493361b2467a558483801",
       "file:size": 22189679,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -509,9 +557,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa13_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa13",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -523,6 +571,10 @@
       ],
       "file:checksum": "cde690e53140d3b97f8184fe4e06a7f0",
       "file:size": 18609409,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -531,9 +583,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa14_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa14",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -545,6 +597,10 @@
       ],
       "file:checksum": "4e5ff2ff0f1c6b5196197cf1dbe9b83b",
       "file:size": 19923001,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -553,9 +609,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa15_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa15",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -567,6 +623,10 @@
       ],
       "file:checksum": "876681e560576ea82d7d05e2171780b2",
       "file:size": 22855092,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -575,9 +635,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa16_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa16",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -589,6 +649,10 @@
       ],
       "file:checksum": "854b56744eb10b748c1915577370a01b",
       "file:size": 22712386,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -597,9 +661,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa17_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa17",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -611,6 +675,10 @@
       ],
       "file:checksum": "611502aed66632424dba572668566e0c",
       "file:size": 22534471,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -619,9 +687,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa18_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa18",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -633,6 +701,10 @@
       ],
       "file:checksum": "53b0ab6a6ffd0ee2f5466fbc9eccdcf1",
       "file:size": 22299896,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -641,9 +713,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa19_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa19",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -655,6 +727,10 @@
       ],
       "file:checksum": "7065f33ac97d07849d028f7907789502",
       "file:size": 22206798,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -663,9 +739,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa20_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa20",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -677,6 +753,10 @@
       ],
       "file:checksum": "38b3db2d1a854a16548dc3cdf7fa28eb",
       "file:size": 22344681,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]
@@ -685,9 +765,9 @@
       "href": "../tests/data-files/S3A_OL_1_EFR____20211021T073827_20211021T074112_20211021T091357_0164_077_334_4320_LN1_O_NR_002.SEN3/Oa21_radiance.nc",
       "type": "application/x-netcdf",
       "description": "TOA radiance for OLCI acquisition band Oa21",
-      "resolution": [
-        270,
-        294
+      "s3:spatial_resolution": [
+        294,
+        270
       ],
       "eo:bands": [
         {
@@ -699,6 +779,10 @@
       ],
       "file:checksum": "7bd2fb08d506cd9a5de2252a86e70a7c",
       "file:size": 23210999,
+      "s3:shape": [
+        3749,
+        4865
+      ],
       "roles": [
         "data"
       ]

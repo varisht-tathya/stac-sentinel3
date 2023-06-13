@@ -1,7 +1,11 @@
+import logging
 import shutil
 from pathlib import Path
 
 from stactools.sentinel3 import stac
+
+logging.basicConfig(level=0)
+logging.getLogger("fsspec").propagate = False
 
 root = Path(__file__).parents[1]
 examples = root / "examples"

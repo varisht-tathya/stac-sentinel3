@@ -24,10 +24,6 @@
     },
     "s3:saline_water": 72.660328,
     "s3:land": 27.276878,
-    "s3:shape": [
-      324,
-      4035
-    ],
     "platform": "Sentinel-3B",
     "constellation": "Sentinel-3",
     "s3:processing_timeliness": "NT",
@@ -1421,6 +1417,10 @@
       "description": "SAFE product manifest",
       "file:checksum": "e55367170bb60e7d1cab151c24e6e086",
       "file:size": 48295,
+      "s3:shape": [
+        4035,
+        324
+      ],
       "roles": [
         "metadata"
       ]
@@ -1429,7 +1429,7 @@
       "href": "../tests/data-files/S3B_SY_2_AOD____20210512T143315_20210512T151738_20210514T064157_2663_052_196______LN2_O_NT_002.SEN3/NTC_AOD.nc",
       "type": "application/x-netcdf",
       "description": "Global aerosol parameters",
-      "resolution": [
+      "s3:spatial_resolution": [
         4500,
         4500
       ],
@@ -1473,6 +1473,10 @@
       ],
       "file:checksum": "453028626dd93f7a69a6d6953e872834",
       "file:size": 33302097,
+      "s3:shape": [
+        4035,
+        324
+      ],
       "roles": [
         "data"
       ]

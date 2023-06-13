@@ -27,10 +27,6 @@
     "s3:duplicated": 5.449222,
     "s3:saturated": 0.0,
     "s3:out_of_range": 0.0,
-    "s3:shape": [
-      1500,
-      1200
-    ],
     "platform": "Sentinel-3A",
     "constellation": "Sentinel-3",
     "s3:processing_timeliness": "NT",
@@ -336,6 +332,10 @@
       "description": "SAFE product manifest",
       "file:checksum": "7556442c0b42c150816e46a1308acb03",
       "file:size": 117096,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "metadata"
       ]
@@ -344,7 +344,7 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_in.nc",
       "type": "application/x-netcdf",
       "description": "Land Surface Temperature (LST) values",
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
@@ -364,6 +364,10 @@
       ],
       "file:checksum": "c8052a87ba971ffd2fac11848fae8046",
       "file:size": 790066,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -372,12 +376,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/LST_ancillary_ds.nc",
       "type": "application/x-netcdf",
       "description": "LST ancillary measurement dataset",
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
       "file:checksum": "33363c5ac9880e5dd2adce45fcc12abc",
       "file:size": 1391879,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -386,12 +394,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/flags_in.nc",
       "type": "application/x-netcdf",
       "description": "Global flags for the 1km TIR grid, nadir view",
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
       "file:checksum": "406b2a87a475231398a1a30781d37fbf",
       "file:size": 2021106,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -400,12 +412,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/indices_in.nc",
       "type": "application/x-netcdf",
       "description": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
       "file:checksum": "09533e74cf3909708c646959d4ac3e13",
       "file:size": 884423,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -414,12 +430,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/time_in.nc",
       "type": "application/x-netcdf",
       "description": "Time annotations for the 1 KM grid",
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
       "file:checksum": "5a2871990593b847c27d58587d07aa54",
       "file:size": 64446,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -428,12 +448,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_in.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
       "file:checksum": "dd2e989843c4ca18301fc4ce65daaddf",
       "file:size": 7783851,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -442,12 +466,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_in.nc",
       "type": "application/x-netcdf",
       "description": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
       "file:checksum": "c07a3e094dc44d493826b1a9f5292375",
       "file:size": 4635113,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -456,12 +484,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geometry_tn.nc",
       "type": "application/x-netcdf",
       "description": "16km solar and satellite geometry annotations, nadir view",
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "2425accdcb2930dba120eafb5c21d15c",
       "file:size": 3355466,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -470,12 +502,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/geodetic_tx.nc",
       "type": "application/x-netcdf",
       "description": "16km geodetic coordinates",
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "f65a157b348e5b0931716731385549f2",
       "file:size": 1681223,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -484,12 +520,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/cartesian_tx.nc",
       "type": "application/x-netcdf",
       "description": "16km cartesian coordinates",
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "e7d5df992cee370002a8765786f00e1c",
       "file:size": 41952,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]
@@ -498,12 +538,16 @@
       "href": "../tests/data-files/S3A_SL_2_LST____20210510T002955_20210510T003255_20210511T101010_0179_071_301_5760_LN2_O_NT_004.SEN3/met_tx.nc",
       "type": "application/x-netcdf",
       "description": "Meteorological parameters regridded onto the 16km tie points",
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "e5bc65e1a446027cd22a508419282fd6",
       "file:size": 33032113,
+      "s3:shape": [
+        1200,
+        1500
+      ],
       "roles": [
         "data"
       ]

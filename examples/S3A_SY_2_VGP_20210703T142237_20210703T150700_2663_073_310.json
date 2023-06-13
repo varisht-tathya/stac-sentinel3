@@ -1428,21 +1428,11 @@
     "b0": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B0.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 23941
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        23941
       ],
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
@@ -1463,21 +1453,11 @@
     "b2": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B2.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 23941
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        23941
       ],
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
@@ -1498,21 +1478,11 @@
     "b3": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/B3.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 23941
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        23941
       ],
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
@@ -1533,21 +1503,11 @@
     "mir": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/MIR.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 23941
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        23941
       ],
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],
@@ -1568,23 +1528,13 @@
     "vaa": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vaa.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 1496
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        1496
       ],
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "fd28cf3d969a04f31d5008918f28a082",
       "file:size": 272952,
@@ -1595,23 +1545,13 @@
     "vza": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/vza.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 1496
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        1496
       ],
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "27b52e52526c55f73b08893aa42812f2",
       "file:size": 449317,
@@ -1622,23 +1562,13 @@
     "saa": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/saa.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 1496
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        1496
       ],
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "18a3b9ed14308bc2af1905f954690b55",
       "file:size": 259002,
@@ -1649,23 +1579,13 @@
     "sza": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sza.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 1496
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        1496
       ],
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "c5f680570de765477ac36307bfb4beaf",
       "file:size": 291332,
@@ -1676,23 +1596,13 @@
     "ag": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/ag.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 1496
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        1496
       ],
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "f16a21ded98f76185b555b389fb985b8",
       "file:size": 445172,
@@ -1703,23 +1613,13 @@
     "og": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/og.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 1496
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        1496
       ],
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "5a92524adf7feab2f53b3bde64df963a",
       "file:size": 248484,
@@ -1730,23 +1630,13 @@
     "wvg": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/wvg.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 1496
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        1496
       ],
-      "resolution": [
-        16000,
-        1000
+      "s3:spatial_resolution": [
+        1000,
+        16000
       ],
       "file:checksum": "6d478c7790e12b7c34f622b67ee5a617",
       "file:size": 624971,
@@ -1757,21 +1647,11 @@
     "sm": {
       "href": "../tests/data-files/S3A_SY_2_VGP____20210703T142237_20210703T150700_20210703T211742_2663_073_310______LN2_O_ST_002.SEN3/sm.nc",
       "type": "application/x-netcdf",
-      "vgp:shape": [
-        {
-          "latitude": 14672
-        },
-        {
-          "longitude": 23941
-        },
-        {
-          "vertices": 2
-        },
-        {
-          "crs": 1
-        }
+      "s3:shape": [
+        14672,
+        23941
       ],
-      "resolution": [
+      "s3:spatial_resolution": [
         1000,
         1000
       ],

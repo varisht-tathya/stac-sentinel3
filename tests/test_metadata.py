@@ -101,7 +101,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 25.0,
             "saturatedPixels_percentage": 0.0,
             "dubiousSamples_percentage": 0.0,
-            "shape": [4865, 3749],
+            "shape": [3749, 4865],
         }
 
         for k, v in expected.items():
@@ -198,7 +198,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 0.0,
             "saturatedPixels_percentage": 8e-06,
             "dubiousSamples_percentage": 0.0,
-            "shape": [1217, 15070],
+            "shape": [15070, 1217],
         }
 
         for k, v in expected.items():
@@ -297,7 +297,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 1.545942,
             "saturatedPixels_percentage": 0.0,
             "dubiousSamples_percentage": 0.0,
-            "shape": [4865, 4090],
+            "shape": [4090, 4865],
         }
 
         for k, v in expected.items():
@@ -396,7 +396,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 0.0,
             "saturatedPixels_percentage": 0.0,
             "dubiousSamples_percentage": 0.0,
-            "shape": [1217, 15092],
+            "shape": [15092, 1217],
         }
 
         for k, v in expected.items():
@@ -495,7 +495,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 11.701367,
             "saturatedPixels_percentage": 0.0,
             "dubiousSamples_percentage": 0.0,
-            "shape": [4865, 4091],
+            "shape": [4091, 4865],
         }
 
         for k, v in expected.items():
@@ -592,7 +592,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 5.105382,
             "saturatedPixels_percentage": 0.0,
             "outOfRangePixels_percentage": 0.0,
-            "shape": [1500, 1200],
+            "shape": [1200, 1500],
         }
 
         for k, v in expected.items():
@@ -689,7 +689,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 5.461111,
             "saturatedPixels_percentage": 0.0,
             "outOfRangePixels_percentage": 0.184722,
-            "shape": [1500, 1200],
+            "shape": [1200, 1500],
         }
 
         for k, v in expected.items():
@@ -786,7 +786,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 5.449222,
             "saturatedPixels_percentage": 0.0,
             "outOfRangePixels_percentage": 0.0,
-            "shape": [1500, 1200],
+            "shape": [1200, 1500],
         }
 
         for k, v in expected.items():
@@ -883,7 +883,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "duplicatedPixels_percentage": 0.0,
             "saturatedPixels_percentage": 0.0,
             "outOfRangePixels_percentage": 26.93685,
-            "shape": [1500, 40394],
+            "shape": [40394, 1500],
         }
 
         for k, v in expected.items():
@@ -1100,7 +1100,7 @@ class Sentinel3OLCIMetadataTest(unittest.TestCase):
             "productType": "SY_2_AOD___",
             "salineWaterPixels_percentage": 72.660328,
             "landPixels_percentage": 27.276878,
-            "shape": [324, 4035],
+            "shape": [4035, 324],
         }
 
         for k, v in expected.items():

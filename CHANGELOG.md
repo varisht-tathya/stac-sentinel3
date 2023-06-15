@@ -14,6 +14,7 @@ number as needed.
 - Item ID format ([#9](https://github.com/stactools-packages/sentinel3/pull/9))
 - Use kebab-case for asset keys ([#13](https://github.com/stactools-packages/sentinel3/pull/13))
 - Use snake_case for item properties ([#13](https://github.com/stactools-packages/sentinel3/pull/15))
+- Use standard array shape and size ordering ([#16](https://github.com/stactools-packages/sentinel3/pull/16))
 
 ### Fixed
 

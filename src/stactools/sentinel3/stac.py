@@ -4,7 +4,9 @@ import re
 from decimal import Decimal
 from typing import Any, Dict, List, Optional
 
+import antimeridian
 import pystac
+import shapely.geometry
 from pystac.extensions.eo import EOExtension
 from pystac.extensions.sat import SatExtension
 from stactools.core.io import ReadHrefModifier
@@ -24,6 +26,7 @@ from .properties import (
     fill_manifest_file_properties,
     fill_sat_properties,
 )
+from .winding import get_winding
 
 logger = logging.getLogger(__name__)
 
@@ -311,4 +314,44 @@ def create_item(
                 band["center_frequency"] = hz2ghz(band.pop("central_frequency"))
                 band["band_width"] = hz2ghz(band.pop("band_width_in_Hz"))
 
+    # ---- GEOMETRY ----
+    geometry_dict = item.geometry
+    assert isinstance(geometry_dict, dict)
+    assert geometry_dict["type"] == "Polygon"
+
+    if item.properties["s3:product_name"] in [
+        "synergy-v10",
+        "synergy-vg1",
+    ]:
+        max_delta_lon = 300
+    else:
+        max_delta_lon = 120
+
+    coords = list(geometry_dict["coordinates"][0])
+    winding = get_winding(coords, max_delta_lon)
+    if winding == "CW":
+        geometry_dict["coordinates"] = [coords[::-1]]
+    elif winding is None:
+        logger.warning(
+            "Could not determine winding order of polygon in " f"Item: '{item.id}'"
+        )
+
+    geometry = shapely.geometry.shape(geometry_dict)
+
+    # slstr-lst strip geometries are incorrect, so we apply a hack
+    if item.properties["s3:product_name"] == "slstr-lst" and item.id.endswith("_____"):
+        geometry = antimeridian.fix_polygon(geometry, force_north_pole=True)
+    else:
+        geometry = antimeridian.fix_polygon(geometry)
+
+    if not geometry.is_valid:
+        geometry = geometry.buffer(0)
+
+    item.bbox = recursive_round(list(geometry.bounds), precision=4)
+    geometry_dict = shapely.geometry.mapping(geometry)
+    assert isinstance(geometry_dict, dict)
+    geometry_dict["coordinates"] = recursive_round(
+        list(geometry_dict["coordinates"]), precision=4
+    )
+    item.geometry = geometry_dict
     return item

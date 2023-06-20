@@ -75,6 +75,32 @@ class MetadataLinks:
         )
         return constants.SAFE_MANIFEST_ASSET_KEY, asset
 
+    def _get_resolution(self, asset_href: str, skip_nc: bool) -> List[int]:
+        if skip_nc:
+            return []
+        ds = nc.Dataset(asset_href)
+        if hasattr(ds, "resolution"):
+            asset_resolution_str = ds.resolution.strip("[] ")
+            asset_resolution = [
+                int(r) for r in reversed(asset_resolution_str.split(" "))
+            ]
+        elif hasattr(ds, "spatial_resolution"):
+            spatres_str = ds.spatial_resolution
+            tail = "km at nadir"
+            if spatres_str.endswith(tail):
+                asset_resolution_str = spatres_str.replace(tail, "")
+                asset_resolution = [
+                    int(asset_resolution_str),
+                    int(asset_resolution_str),
+                ]
+            else:
+                raise ValueError(
+                    "Did not recognize 'spatial_resolution' string from " + asset_href
+                )
+        else:
+            raise ValueError("Don't know how to pull resolution from " + asset_href)
+        return asset_resolution
+
     def create_band_asset(self, manifest: XmlElement, skip_nc=False):
         def strip_prefix(prefix: str, content: str) -> str:
             if content.startswith(prefix):
@@ -172,22 +198,14 @@ class MetadataLinks:
                         "mimeType", f".//dataObject[@ID='{asset_key}']//byteStream"
                     )
                     asset_description = "Global aerosol parameters"
-                    if skip_nc:
-                        asset_resolution = []
-                    else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     asset_obj = pystac.Asset(
                         href=asset_href,
                         media_type=media_type,
                         description=asset_description,
                         roles=["data"],
                         extra_fields={
-                            "resolution": asset_resolution,
+                            "s3:spatial_resolution": asset_resolution,
                             "eo:bands": band_dict_list,
                         },
                     )
@@ -258,16 +276,10 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo", f".//dataObject[@ID='{asset_key}']//fileLocation"
                     )
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     if skip_nc:
-                        asset_resolution = []
                         asset_shape_list = []
                     else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
                         asset_shape_list = []
                         for key in nc.Dataset(asset_href).dimensions.keys():
                             asset_shape_dict = {
@@ -281,8 +293,8 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                "syn:shape": asset_shape_list,
-                                "resolution": asset_resolution,
+                                "s3:shape": asset_shape_list,
+                                "s3:spatial_resolution": asset_resolution,
                                 "eo:bands": band_dict_list,
                             },
                         )
@@ -293,8 +305,8 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                "syn:shape": asset_shape_list,
-                                "resolution": asset_resolution,
+                                "s3:shape": asset_shape_list,
+                                "s3:spatial_resolution": asset_resolution,
                             },
                         )
                     asset_identifier_list.append(asset_key)
@@ -346,16 +358,10 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo", f".//dataObject[@ID='{asset_key}']//fileLocation"
                     )
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     if skip_nc:
-                        asset_resolution = []
                         asset_shape_list = []
                     else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
                         asset_shape_list = []
                         for key in nc.Dataset(asset_href).dimensions.keys():
                             asset_shape_dict = {
@@ -369,8 +375,8 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                f"{product_type.split('_')[2].lower()}:shape": asset_shape_list,
-                                "resolution": asset_resolution,
+                                "s3:shape": asset_shape_list,
+                                "s3:spatial_resolution": asset_resolution,
                                 "eo:bands": band_dict_list,
                             },
                         )
@@ -381,8 +387,8 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                f"{product_type.split('_')[2].lower()}:shape": asset_shape_list,
-                                "resolution": asset_resolution,
+                                "s3:shape": asset_shape_list,
+                                "s3:spatial_resolution": asset_resolution,
                             },
                         )
                     asset_identifier_list.append(asset_key)
@@ -418,16 +424,10 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo", f".//dataObject[@ID='{asset_key}']//fileLocation"
                     )
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     if skip_nc:
-                        asset_resolution = []
                         asset_shape_list = []
                     else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
                         asset_shape_list = []
                         for key in nc.Dataset(asset_href).dimensions.keys():
                             asset_shape_dict = {
@@ -441,8 +441,8 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                "vgp:shape": asset_shape_list,
-                                "resolution": asset_resolution,
+                                "s3:shape": asset_shape_list,
+                                "s3:spatial_resolution": asset_resolution,
                                 "eo:bands": band_dict_list,
                             },
                         )
@@ -453,8 +453,8 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                "vgp:shape": asset_shape_list,
-                                "resolution": asset_resolution,
+                                "s3:shape": asset_shape_list,
+                                "s3:spatial_resolution": asset_resolution,
                             },
                         )
                     asset_identifier_list.append(asset_key)
@@ -481,22 +481,14 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo", f".//dataObject[@ID='{asset_key}']//fileLocation"
                     )
-                    if skip_nc:
-                        asset_resolution = []
-                    else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     asset_obj = pystac.Asset(
                         href=asset_href,
                         media_type=media_type,
                         description=asset_description,
                         roles=["data"],
                         extra_fields={
-                            "resolution": asset_resolution,
+                            "s3:spatial_resolution": asset_resolution,
                             "eo:bands": [band_dict],
                         },
                     )
@@ -530,22 +522,14 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo", f".//dataObject[@ID='{asset_key}']//fileLocation"
                     )
-                    if skip_nc:
-                        asset_resolution = []
-                    else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     if not band_key_list:
                         asset_obj = pystac.Asset(
                             href=asset_href,
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"resolution": asset_resolution},
+                            extra_fields={"s3:spatial_resolution": asset_resolution},
                         )
                     else:
                         band_dict_list = []
@@ -567,7 +551,7 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                "resolution": asset_resolution,
+                                "s3:spatial_resolution": asset_resolution,
                                 "eo:bands": band_dict_list,
                             },
                         )
@@ -635,15 +619,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo", f".//dataObject[@ID='{asset_key}']//fileLocation"
                     )
-                    if skip_nc:
-                        asset_resolution = []
-                    else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     if band_key_list:
                         band_dict_list = []
                         for band in band_key_list:
@@ -664,7 +640,7 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                "resolution": asset_resolution,
+                                "s3:spatial_resolution": asset_resolution,
                                 "eo:bands": band_dict_list,
                             },
                         )
@@ -674,7 +650,7 @@ class MetadataLinks:
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"resolution": asset_resolution},
+                            extra_fields={"s3:spatial_resolution": asset_resolution},
                         )
                     asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
@@ -700,22 +676,14 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo", f".//dataObject[@ID='{asset_key}']//fileLocation"
                     )
-                    if skip_nc:
-                        asset_resolution = []
-                    else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     asset_obj = pystac.Asset(
                         href=asset_href,
                         media_type=media_type,
                         description=asset_description,
                         roles=["data"],
                         extra_fields={
-                            "resolution": asset_resolution,
+                            "s3:spatial_resolution": asset_resolution,
                             "eo:bands": [band_dict],
                         },
                     )
@@ -740,15 +708,7 @@ class MetadataLinks:
                     asset_description = manifest.find_attr(
                         "textInfo", f".//dataObject[@ID='{asset_key}']//fileLocation"
                     )
-                    if skip_nc:
-                        asset_resolution = []
-                    else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     if band_key_list:
                         band_dict_list = []
                         for band in band_key_list:
@@ -770,7 +730,7 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                "resolution": asset_resolution,
+                                "s3:spatial_resolution": asset_resolution,
                                 "eo:bands": band_dict_list,
                             },
                         )
@@ -780,7 +740,7 @@ class MetadataLinks:
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"resolution": asset_resolution},
+                            extra_fields={"s3:spatial_resolution": asset_resolution},
                         )
                     asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
@@ -800,15 +760,7 @@ class MetadataLinks:
                     media_type = manifest.find_attr(
                         "mimeType", f".//dataObject[@ID='{asset_key}']//byteStream"
                     )
-                    if skip_nc:
-                        asset_resolution = []
-                    else:
-                        asset_resolution_str = nc.Dataset(asset_href).resolution
-                        asset_resolution_split = asset_resolution_str.split(" ")
-                        asset_resolution = [
-                            int(asset_resolution_split[1]),
-                            int(asset_resolution_split[2]),
-                        ]
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     if band_key_list:
                         band_dict_list = []
                         for band in band_key_list:
@@ -830,7 +782,7 @@ class MetadataLinks:
                             description=asset_description,
                             roles=["data"],
                             extra_fields={
-                                "resolution": asset_resolution,
+                                "s3:spatial_resolution": asset_resolution,
                                 "eo:bands": band_dict_list,
                             },
                         )
@@ -844,7 +796,7 @@ class MetadataLinks:
                             media_type=media_type,
                             description=asset_description,
                             roles=["data"],
-                            extra_fields={"resolution": asset_resolution},
+                            extra_fields={"s3:spatial_resolution": asset_resolution},
                         )
                     asset_identifier_list.append(asset_key)
                     asset_list.append(asset_obj)
@@ -876,17 +828,14 @@ class MetadataLinks:
                         "Data respects the Group for High Resolution "
                         "Sea Surface Temperature (GHRSST) L2P specification"
                     )
-                    if skip_nc:
-                        asset_resolution_str = ""
-                    else:
-                        asset_resolution_str = nc.Dataset(asset_href).spatial_resolution
+                    asset_resolution = self._get_resolution(asset_href, skip_nc)
                     asset_obj = pystac.Asset(
                         href=asset_href,
                         media_type=media_type,
                         description=asset_description,
                         roles=["data"],
                         extra_fields={
-                            "resolution": asset_resolution_str,
+                            "s3:spatial_resolution": asset_resolution,
                             "eo:bands": band_dict_list,
                         },
                     )

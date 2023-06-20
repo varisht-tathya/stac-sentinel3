@@ -119,7 +119,7 @@ class ProductMetadata:
         def _get_shape():
             x_size = int(xml.find_text(self._root, ".//sentinel3:columns"))
             y_size = int(xml.find_text(self._root, ".//sentinel3:rows"))
-            shape = [x_size, y_size]
+            shape = [y_size, x_size]
 
             return shape
 

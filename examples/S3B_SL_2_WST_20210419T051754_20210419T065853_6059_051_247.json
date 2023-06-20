@@ -27,10 +27,6 @@
     "s3:duplicated": 0.0,
     "s3:saturated": 0.0,
     "s3:out_of_range": 26.93685,
-    "s3:shape": [
-      1500,
-      40394
-    ],
     "platform": "Sentinel-3B",
     "constellation": "Sentinel-3",
     "s3:processing_timeliness": "NT",
@@ -1336,6 +1332,10 @@
       "description": "SAFE product manifest",
       "file:checksum": "78276d1a70ef406665d21d6cb83ecb62",
       "file:size": 214116,
+      "s3:shape": [
+        40394,
+        1500
+      ],
       "roles": [
         "metadata"
       ]
@@ -1344,7 +1344,10 @@
       "href": "../tests/data-files/S3B_SL_2_WST____20210419T051754_20210419T065853_20210420T160434_6059_051_247______MAR_O_NT_003.SEN3/20210419051754-MAR-L2P_GHRSST-SSTskin-SLSTRB-20210420160434-v02.0-fv01.0.nc",
       "type": "application/x-netcdf",
       "description": "Data respects the Group for High Resolution Sea Surface Temperature (GHRSST) L2P specification",
-      "resolution": "1 km at nadir",
+      "s3:spatial_resolution": [
+        1,
+        1
+      ],
       "eo:bands": [
         {
           "name": "S7",
@@ -1367,6 +1370,10 @@
       ],
       "file:checksum": "f7e67d0bb4acf309861443825cda3790",
       "file:size": 644094789,
+      "s3:shape": [
+        40394,
+        1500
+      ],
       "roles": [
         "data"
       ]

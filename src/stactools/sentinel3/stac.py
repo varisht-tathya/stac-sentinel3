@@ -186,7 +186,7 @@ def create_item(
         stac_extensions=["https://stac-extensions.github.io/file/v2.1.0/schema.json"],
     )
     sen3naming = re.match(
-        r".*/(?P<mission>...)_(?P<source>[A-Z]{2})_(?P<level>[_012])_(?P<datatype>.{6})"
+        r"^.*/?(?P<mission>...)_(?P<source>[A-Z]{2})_(?P<level>[_012])_(?P<datatype>.{6})"
         r"_(?P<datastart>.{15})_(?P<datastop>.{15})_(?P<creation>.{15})"
         r"_(?P<instance_id>((?P<duration>[0-9]{4})_(?P<cycle>[0-9]{3})"
         r"_(?P<relative_orbit>[0-9]{3})"
@@ -339,7 +339,9 @@ def create_item(
     geometry = shapely.geometry.shape(geometry_dict)
 
     # slstr-lst strip geometries are incorrect, so we apply a hack
-    if item.properties["s3:product_name"] == "slstr-lst" and item.id.endswith("_____"):
+    if item.properties["s3:product_name"] == "slstr-lst" and sen3naming.group(
+        "instance_id"
+    ).endswith("_____"):
         geometry = antimeridian.fix_polygon(geometry, force_north_pole=True)
     else:
         geometry = antimeridian.fix_polygon(geometry)

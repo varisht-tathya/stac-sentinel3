@@ -21,6 +21,8 @@ number as needed.
 ### Fixed
 
 - Use correct EO Extension attribute names and units ([#13](https://github.com/stactools-packages/sentinel3/pull/15))
+- Use un-stripped `instance_id` to check for strip granules and apply geometry
+  fix ([#19](https://github.com/stactools-packages/sentinel3/pull/19))
 
 ## [0.4.0] - 2023-03-31
 

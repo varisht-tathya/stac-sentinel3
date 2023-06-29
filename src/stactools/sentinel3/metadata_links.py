@@ -99,6 +99,7 @@ class MetadataLinks:
                 )
         else:
             raise ValueError("Don't know how to pull resolution from " + asset_href)
+        ds.close()
         return asset_resolution
 
     def create_band_asset(self, manifest: XmlElement, skip_nc=False):
@@ -157,11 +158,11 @@ class MetadataLinks:
                     asset_shape_list: List[dict] = []
                 else:
                     asset_shape_list = []
-                    for key in nc.Dataset(asset_href).dimensions.keys():
-                        asset_shape_dict = {
-                            key: int(nc.Dataset(asset_href).dimensions[key].size)
-                        }
+                    ds = nc.Dataset(asset_href)
+                    for key in ds.dimensions.keys():
+                        asset_shape_dict = {key: int(ds.dimensions[key].size)}
                         asset_shape_list.append(asset_shape_dict)
+                    ds.close()
                 asset_obj = pystac.Asset(
                     href=asset_href,
                     media_type=media_type,
@@ -281,11 +282,11 @@ class MetadataLinks:
                         asset_shape_list = []
                     else:
                         asset_shape_list = []
-                        for key in nc.Dataset(asset_href).dimensions.keys():
-                            asset_shape_dict = {
-                                key: int(nc.Dataset(asset_href).dimensions[key].size)
-                            }
+                        ds = nc.Dataset(asset_href)
+                        for key in ds.dimensions.keys():
+                            asset_shape_dict = {key: int(ds.dimensions[key].size)}
                             asset_shape_list.append(asset_shape_dict)
+                        ds.close()
                     if band_dict_list:
                         asset_obj = pystac.Asset(
                             href=asset_href,
@@ -363,11 +364,11 @@ class MetadataLinks:
                         asset_shape_list = []
                     else:
                         asset_shape_list = []
-                        for key in nc.Dataset(asset_href).dimensions.keys():
-                            asset_shape_dict = {
-                                key: int(nc.Dataset(asset_href).dimensions[key].size)
-                            }
+                        ds = nc.Dataset(asset_href)
+                        for key in ds.dimensions.keys():
+                            asset_shape_dict = {key: int(ds.dimensions[key].size)}
                             asset_shape_list.append(asset_shape_dict)
+                        ds.close()
                     if band_dict_list:
                         asset_obj = pystac.Asset(
                             href=asset_href,
@@ -429,11 +430,11 @@ class MetadataLinks:
                         asset_shape_list = []
                     else:
                         asset_shape_list = []
-                        for key in nc.Dataset(asset_href).dimensions.keys():
-                            asset_shape_dict = {
-                                key: int(nc.Dataset(asset_href).dimensions[key].size)
-                            }
+                        ds = nc.Dataset(asset_href)
+                        for key in ds.dimensions.keys():
+                            asset_shape_dict = {key: int(ds.dimensions[key].size)}
                             asset_shape_list.append(asset_shape_dict)
+                        ds.close()
                     if band_dict_list:
                         asset_obj = pystac.Asset(
                             href=asset_href,

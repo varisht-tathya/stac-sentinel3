@@ -284,7 +284,7 @@ def create_item(
         # ensure shape is set at asset level
         asset_shape = asset.extra_fields.get("s3:shape", None)
         s3shape: List[int] = []
-        if asset_shape or item_shape:
+        if asset_shape or item_shape and asset_key != "safe-manifest":
             s3shape = get_array_shape(asset_shape, item_shape)
         if len(s3shape) > 0:
             asset.extra_fields["s3:shape"] = s3shape

@@ -939,10 +939,6 @@
       "description": "SAFE product manifest",
       "file:checksum": "12705ca470488a8da7711a96cc741e1a",
       "file:size": 164616,
-      "s3:shape": [
-        15070,
-        1217
-      ],
       "roles": [
         "metadata"
       ]
@@ -1503,6 +1499,6 @@
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/eo/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v1.1.0/schema.json"
   ]
 }

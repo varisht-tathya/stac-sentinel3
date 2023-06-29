@@ -24,6 +24,8 @@ number as needed.
 - Use un-stripped `instance_id` to check for strip granules and apply geometry
   fix ([#19](https://github.com/stactools-packages/sentinel3/pull/19))
 - Close file handles ([#21](https://github.com/stactools-packages/sentinel3/pull/21))
+- Prevent addition of `'s3:shape'` to safe-manifest asset
+  ([#22](https://github.com/stactools-packages/sentinel3/pull/23))
 
 ## [0.4.0] - 2023-03-31
 

@@ -90,8 +90,8 @@ class MetadataLinks:
             if spatres_str.endswith(tail):
                 asset_resolution_str = spatres_str.replace(tail, "")
                 asset_resolution = [
-                    int(asset_resolution_str),
-                    int(asset_resolution_str),
+                    int(asset_resolution_str) * 1000,
+                    int(asset_resolution_str) * 1000,
                 ]
             else:
                 raise ValueError(

@@ -1131,8 +1131,8 @@
       "type": "application/x-netcdf",
       "description": "Data respects the Group for High Resolution Sea Surface Temperature (GHRSST) L2P specification",
       "s3:spatial_resolution": [
-        1,
-        1
+        1000,
+        1000
       ],
       "eo:bands": [
         {

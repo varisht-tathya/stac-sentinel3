@@ -402,10 +402,14 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    asset_eo = EOExtension.ext(asset)
-                    bands = asset_eo.bands
-                    if bands is not None:
-                        bands_seen |= set(b.name for b in bands)
+                    bands = set(
+                        [
+                            band["frequency_band"]
+                            for band in asset.extra_fields.get("s3:altimetry_bands", [])
+                        ]
+                    )
+                    if bands:
+                        bands_seen |= bands
 
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
@@ -441,11 +445,14 @@ class CreateItemTest(CliTestCase):
                 for _, asset in item.assets.items():
                     self.assertTrue("/./" not in asset.href)
                     self.assertTrue(is_absolute_href(asset.href))
-                    asset_eo = EOExtension.ext(asset)
-                    bands = asset_eo.bands
-                    if bands is not None:
-                        bands_seen |= set(b.name for b in bands)
-
+                    bands = set(
+                        [
+                            band["frequency_band"]
+                            for band in asset.extra_fields.get("s3:altimetry_bands", [])
+                        ]
+                    )
+                    if bands:
+                        bands_seen |= bands
                 [self.assertTrue(band in band_list) for band in bands_seen]
                 os.remove(f"{tmp_dir}/{item_id}.json")
 

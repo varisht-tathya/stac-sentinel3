@@ -205,8 +205,9 @@ def create_item(
     fill_sat_properties(sat, metalinks.manifest)
 
     # eo
-    eo = EOExtension.ext(item, add_if_missing=True)
-    fill_eo_properties(eo, metalinks.manifest)
+    if sen3naming.group("datatype") not in ("WAT___", "LAN___"):
+        eo = EOExtension.ext(item, add_if_missing=True)
+        fill_eo_properties(eo, metalinks.manifest)
 
     # s3 properties
     item.properties.update({**product_metadata.metadata_dict})
@@ -356,4 +357,5 @@ def create_item(
         list(geometry_dict["coordinates"]), precision=4
     )
     item.geometry = geometry_dict
+
     return item

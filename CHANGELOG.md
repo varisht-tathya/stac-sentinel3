@@ -27,6 +27,8 @@ number as needed.
 - Prevent addition of `'s3:shape'` to safe-manifest asset
   ([#22](https://github.com/stactools-packages/sentinel3/pull/23))
 - Make `s3:spatial_resolution` unit meters ([#29](https://github.com/stactools-packages/sentinel3/pull/29))
+- Don't add EO extension to radar products
+  ([#26](https://github.com/stactools-packages/sentinel3/pull/30))
 
 ## [0.4.0] - 2023-03-31
 

@@ -31,11 +31,9 @@ class FileExtensionUpdated(FileExtension):
         self._set_property(LOCAL_PATH_PROP, v)
 
     @classmethod
-    def ext(
-        cls, obj: pystac.Asset, add_if_missing: bool = False
-    ) -> "FileExtensionUpdated":
-        super().ext(obj, add_if_missing)
-        return cls(obj)
+    def ext(cls, obj: pystac.Asset, add_if_missing: bool = False) -> "FileExtension":
+        fileextension = super().ext(obj, add_if_missing)
+        return fileextension
 
     @classmethod
     def get_schema_uri(cls) -> str:

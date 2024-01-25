@@ -94,6 +94,18 @@ SENTINEL_SLSTR_BANDS = {
         center_wavelength=10854,
         full_width_half_max=776,
     ),
+    "flags": Band.create(
+        name="flags",
+        description="Flags for clouds",
+        center_wavelength=0,
+        full_width_half_max=0,
+    ),
+    "geodetic": Band.create(
+        name="geodetic",
+        description="Band for georeferencing",
+        center_wavelength=0,
+        full_width_half_max=0,
+    ),
 }
 
 SENTINEL_OLCI_BANDS = {
@@ -569,6 +581,12 @@ SLSTR_BANDS_TO_RESOLUTIONS = {
     "S11": [
         1000,
     ],
+    'flags':[
+        500,
+    ],
+    "geodetic": [
+        500,
+    ],
 }
 
 SYNERGY_SYN_ASSET_KEYS = [
@@ -742,6 +760,8 @@ SLSTR_L1_ASSET_KEYS = [
     "SLSTR_S9_BT_IN_Data",
     "SLSTR_F1_BT_FN_Data",
     "SLSTR_F2_BT_IN_Data",
+    "SLSTR_GEODETIC_AN_Data",
+    "SLSTR_FLAGS_AN_Data",
 ]
 
 SLSTR_L2_FRP_KEYS = [

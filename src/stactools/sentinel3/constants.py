@@ -245,6 +245,30 @@ SENTINEL_OLCI_BANDS = {
         center_wavelength=1020,
         full_width_half_max=40,
     ),
+    "instrumentData": Band.create(
+        name="instrumentDataAnnotation",
+        description="Instrument Data",
+        center_wavelength=1020,
+        full_width_half_max=40,
+    ),
+    "tieMeteo": Band.create(
+        name="tieMeteoAnnotation",
+        description="Tie-Point Meteo Annotations",
+        center_wavelength=1020,
+        full_width_half_max=40,
+    ),
+    "tieGeometries": Band.create(
+        name="tieGeometries",
+        description="Tie-Point Geometries Annotations",
+        center_wavelength=1020,
+        full_width_half_max=40,
+    ),
+    "geoCoordinatesData": Band.create(
+        name="tieGeoCoordinatesAnnotation",
+        description="Tie-Point Geo Coordinate Annotations",
+        center_wavelength=1020,
+        full_width_half_max=40,
+    ),
 }
 
 SENTINEL_SRAL_BANDS = {
@@ -684,6 +708,10 @@ OLCI_L1_ASSET_KEYS = [
     "Oa19_radianceData",
     "Oa20_radianceData",
     "Oa21_radianceData",
+    "instrumentDataData",
+    "tieMeteoData",
+    "tieGeometriesData",
+    "geoCoordinatesData",
 ]
 
 OLCI_L2_LAND_ASSET_KEYS = [

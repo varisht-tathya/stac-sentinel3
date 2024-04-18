@@ -28,71 +28,17 @@ SENTINEL_PROVIDER = pystac.Provider(
 )
 
 SENTINEL_SLSTR_BANDS = {
-    "S01": Band.create(
-        name="S1",
-        description="Band 1 - Cloud screening, vegetation monitoring, aerosol",
-        center_wavelength=554.27,
-        full_width_half_max=19.26,
-    ),
-    "S02": Band.create(
-        name="S2",
-        description="Band 2 - NDVI, vegetation monitoring, aerosol",
-        center_wavelength=659.47,
-        full_width_half_max=19.25,
-    ),
     "S03": Band.create(
         name="S3",
         description="Band 3 - NDVI, cloud flagging, pixel co-registration",
         center_wavelength=868,
         full_width_half_max=20.6,
     ),
-    "S04": Band.create(
-        name="S4",
-        description="Band 4 - Cirrus detection over land",
-        center_wavelength=1374.8,
-        full_width_half_max=20.8,
-    ),
-    "S05": Band.create(
-        name="S5",
-        description="Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
-        center_wavelength=1613.4,
-        full_width_half_max=60.68,
-    ),
     "S06": Band.create(
         name="S6",
         description="Band 6 - Vegetation state and cloud clearing",
         center_wavelength=2255.7,
         full_width_half_max=50.15,
-    ),
-    "S07": Band.create(
-        name="S7",
-        description="Band 7 - SST, LST, Active fire",
-        center_wavelength=3742,
-        full_width_half_max=398,
-    ),
-    "S08": Band.create(
-        name="S8",
-        description="Band 8 - SST, LST, Active fire",
-        center_wavelength=10854,
-        full_width_half_max=776,
-    ),
-    "S09": Band.create(
-        name="S9",
-        description="Band 9 - SST, LST",
-        center_wavelength=12022.5,
-        full_width_half_max=905,
-    ),
-    "S10": Band.create(
-        name="F1",
-        description="Band 10 - Active fire",
-        center_wavelength=3742,
-        full_width_half_max=398,
-    ),
-    "S11": Band.create(
-        name="F2",
-        description="Band 11 - Active fire",
-        center_wavelength=10854,
-        full_width_half_max=776,
     ),
     "flags": Band.create(
         name="flags",
@@ -777,17 +723,8 @@ OLCI_L2_WATER_ASSET_KEYS = [
 ]
 
 SLSTR_L1_ASSET_KEYS = [
-    "SLSTR_S1_RAD_AN_Data",
-    "SLSTR_S2_RAD_AN_Data",
     "SLSTR_S3_RAD_AN_Data",
-    "SLSTR_S4_RAD_AN_Data",
-    "SLSTR_S5_RAD_AN_Data",
     "SLSTR_S6_RAD_AN_Data",
-    "SLSTR_S7_BT_IN_Data",
-    "SLSTR_S8_BT_IN_Data",
-    "SLSTR_S9_BT_IN_Data",
-    "SLSTR_F1_BT_FN_Data",
-    "SLSTR_F2_BT_IN_Data",
     "SLSTR_GEODETIC_AN_Data",
     "SLSTR_FLAGS_AN_Data",
 ]

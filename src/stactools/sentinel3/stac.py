@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Optional
 import antimeridian
 import pystac
 import shapely.geometry
+from pystac.utils import now_to_rfc3339_str
 from pystac.extensions.eo import EOExtension
 from pystac.extensions.sat import SatExtension
 from stactools.core.io import ReadHrefModifier
@@ -182,7 +183,7 @@ def create_item(
         geometry=product_metadata.geometry,
         bbox=product_metadata.bbox,
         datetime=product_metadata.get_datetime,
-        properties={},
+        properties={"created": now_to_rfc3339_str()},
         stac_extensions=["https://stac-extensions.github.io/file/v2.1.0/schema.json"],
     )
     sen3naming = re.match(
